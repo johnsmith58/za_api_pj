@@ -14,6 +14,7 @@ class BookRepository
     public static function getReportList()
     {
         $books = Book::all()->sortByDesc('averageRating')->take(5);
+        
         //groupBy average rating
         // $books = Book::all()->sortByDesc('averageRating')->groupBy(function($book){
         //     return (int)$book->averageRating;

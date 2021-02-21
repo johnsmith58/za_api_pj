@@ -46,7 +46,7 @@ class Book extends Model
             $totalRating += $rating->rating_number;
         }
 
-        if(($totalRating == 0) && (count($this->reviews) == 0))
+        if(count($this->ratings) == 0 || count($this->reviews) == 0)
         {
             return 0;
         }else{

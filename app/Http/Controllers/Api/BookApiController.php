@@ -113,7 +113,6 @@ class BookApiController extends Controller
     public function report()
     {
         $books = BookRepository::getReportList();
-        return response()->json($books);
         return $this->respondCollection('success', BookResource::collection($books));
     }
 }
